@@ -6,27 +6,19 @@
 <title>Govt Boys HSS Sumbal</title>
 
 <style>
-body {margin:0;font-family:Arial;scroll-behavior:smooth}
+body{margin:0;font-family:Arial;scroll-behavior:smooth}
 
 /* NAVBAR */
-.navbar {
-display:flex;justify-content:space-between;align-items:center;
-background:#0b3d91;color:white;padding:10px;position:sticky;top:0;
-}
+.navbar{display:flex;justify-content:space-between;align-items:center;background:#0b3d91;color:white;padding:10px;position:sticky;top:0}
 .logo{display:flex;align-items:center}
 .logo img{width:40px;height:40px;margin-right:10px;border-radius:50%}
-.nav-links a{color:white;margin:8px;text-decoration:none;font-size:14px}
+.nav-links a{color:white;margin:8px;text-decoration:none}
 
 /* HERO */
 .hero{position:relative;height:300px;overflow:hidden}
 .slide{position:absolute;width:100%;height:100%;background-size:cover;background-position:center;opacity:0;transition:1s}
 .slide.active{opacity:1}
-
-.hero-text{
-position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-color:white;text-align:center;background:rgba(0,0,0,0.5);
-padding:15px;border-radius:10px
-}
+.hero-text{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:white;background:rgba(0,0,0,0.5);padding:15px;border-radius:10px;text-align:center}
 
 /* SECTION */
 .section{padding:25px}
@@ -35,11 +27,25 @@ h2{color:#0b3d91}
 
 /* GALLERY */
 .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-.gallery img{width:100%;border-radius:10px}
+.gallery img{width:100%;border-radius:10px;cursor:pointer}
+
+/* ZOOM MODAL */
+.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);justify-content:center;align-items:center}
+.modal img{max-width:90%;max-height:90%}
+
+/* NOTICE */
+.notice{background:yellow;padding:10px;font-weight:bold}
+
+/* WHATSAPP BUTTON */
+.whatsapp{
+position:fixed;bottom:20px;right:20px;
+background:#25D366;color:white;padding:12px 15px;
+border-radius:50px;text-decoration:none;font-size:14px;
+}
 
 /* FOOTER */
 footer{background:#0b3d91;color:white;text-align:center;padding:10px}
-.credit{font-size:12px;margin-top:5px}
+.credit{font-size:12px}
 </style>
 </head>
 
@@ -51,13 +57,16 @@ footer{background:#0b3d91;color:white;text-align:center;padding:10px}
 <img src="logo.png">
 <span>Govt Boys HSS Sumbal</span>
 </div>
-
 <div class="nav-links">
 <a href="#home">Home</a>
 <a href="#about">About</a>
-<a href="#faculty">Faculty</a>
 <a href="#contact">Contact</a>
 </div>
+</div>
+
+<!-- NOTICE -->
+<div class="notice" id="notice">
+📢 Welcome to Govt Boys HSS Sumbal
 </div>
 
 <!-- HERO -->
@@ -79,139 +88,14 @@ footer{background:#0b3d91;color:white;text-align:center;padding:10px}
 <!-- ABOUT -->
 <section class="section" id="about">
 <h2>About Us</h2>
-<p>
-Govt. Model Higher Secondary School Sumbal is a government institution located in Sumbal, Bandipora, Jammu & Kashmir.
-The school has been officially structured as a Higher Secondary institution since 1981 and provides education for classes 9th to 12th.
-</p>
-</section>
-
-<!-- VISION -->
-<section class="section">
-<h2>Vision</h2>
-<p>To create educated, responsible and disciplined citizens.</p>
-
-<h2>Mission</h2>
-<ul>
-<li>Provide quality education</li>
-<li>Maintain discipline</li>
-<li>Promote academic excellence</li>
-<li>Support overall development</li>
-</ul>
-</section>
-
-<!-- PRINCIPAL -->
-<section class="section">
-<h2>Principal Message</h2>
-<p>Our mission is to provide quality education and strong moral values, helping students grow academically and personally.</p>
-</section>
-
-<!-- PRINCIPAL HISTORY -->
-<section class="section">
-<h2>Principal History</h2>
-<div class="card">Mr. M. L. Peer (1983 – 1986)</div>
-<div class="card">Mr. O. N. Raina (1986 – 1993)</div>
-<div class="card">Mr. Abdul Gafar Bhat (1993 – 1996)</div>
-<div class="card">Mr. Farooq Ahmad Sheikh (1996 – 1999)</div>
-<div class="card">Mr. Mohammad Amin Kaloo (1999 – 2001)</div>
-<div class="card">Mr. Shabir Ahmad Sheikh (2001 – 2003)</div>
-<div class="card">Mr. Mohammad Sultan Shah (2004 – 2006)</div>
-<div class="card">Mr. Mushtaq Ahmad Shah (2007 – 2008)</div>
-<div class="card">Mr. Sheikh Tarooq (2008 – 2012)</div>
-<div class="card">Mr. Shafkat Hussain Khan (2012 – 2015)</div>
-<div class="card">Mr. G. N. Zargar (2015 – 2016)</div>
-<div class="card">Mr. Ghulam Hassan Bhat (2016 – 2021)</div>
-<div class="card">Mr. Mohammad Altaf Zargar (2021 – 2022)</div>
-<div class="card">Mtr. Nighat Mubeen (2022 – 2024)</div>
-<div class="card">Mr. Abdul Gani Bhat (2024 – Present)</div>
-</section>
-
-<!-- FACULTY -->
-<section class="section" id="faculty">
-<h2>Teaching Faculty</h2>
-
-<h3>Senior Lecturers</h3>
-<div class="card">Fayaz Ahmad Lone (English)</div>
-<div class="card">Ehteshamul Haq (Botany)</div>
-<div class="card">Mohd Akber Ganie (Chemistry)</div>
-
-<h3>Lecturers</h3>
-<div class="card">Shabir Ahmad Wani (Physical Education)</div>
-<div class="card">Mudasir Abdur Raoof (Biotechnology)</div>
-<div class="card">Ishtiyaq Farooqi (Mathematics)</div>
-<div class="card">Gayas ud din Malik (Economics)</div>
-<div class="card">Farah Qayoom (Zoology)</div>
-<div class="card">Mufti Sheeba (Information Practices)</div>
-
-<h3>Teachers</h3>
-<div class="card">Mohammad Ashraf Shah</div>
-<div class="card">Syed Imtiyaz</div>
-<div class="card">Mohammad Arif Dhobi</div>
-<div class="card">Shoveket Ahmad Khanday</div>
-
-<h3>Vocational Trainers</h3>
-<div class="card">Asif Iqbal (Tourism)</div>
-<div class="card">Umer Bashir (IT & ITES)</div>
-</section>
-
-<!-- NON TEACHING -->
-<section class="section">
-<h2>Non-Teaching Staff</h2>
-<div class="card">Lateef Ahmad Mir (Sr. Assistant)</div>
-<div class="card">Owais Lateef Shah (Librarian)</div>
-<div class="card">Tabasum Raja (Jr. Assistant)</div>
-<div class="card">Javaid Ahmad Bhat (Lab Assistant)</div>
-<div class="card">Shabir Ahmad Gojree (Lab Assistant)</div>
-<div class="card">Sami Ullah (MTS)</div>
-<div class="card">Amir Subhan (MTS)</div>
-<div class="card">Tariq Ahmad Haji (MTS)</div>
-<div class="card">Manzoor Ahmad Ganai (MTS)</div>
-<div class="card">Rajesh Kumar (MTS)</div>
-<div class="card">Manzoor Ahmad Parray (MTS)</div>
-</section>
-
-<!-- STREAMS -->
-<section class="section">
-<h2>Academic Streams</h2>
-<h3>Science</h3>
-<div class="card">Physics, Chemistry, Biology, Mathematics, Biotechnology</div>
-
-<h3>Humanities</h3>
-<div class="card">Economics, Education, History, Urdu</div>
-
-<h3>Commerce</h3>
-<div class="card">Business Studies, Accountancy, Entrepreneurship</div>
-
-<h3>Additional</h3>
-<div class="card">Physical Education, IP / ITES / Tourism</div>
+<p>Govt. Model Higher Secondary School Sumbal located in Bandipora J&K provides education from 9th to 12th since 1981.</p>
 </section>
 
 <!-- TIMING -->
 <section class="section">
 <h2>School Timing</h2>
-<div class="card">Class 9th & 10th: 9:30 AM – 3:30 PM</div>
-<div class="card">Class 11th & 12th: 9:30 AM – 2:45 PM</div>
-</section>
-
-<!-- RULES -->
-<section class="section">
-<h2>Rules & Discipline</h2>
-<ul>
-<li>Regular attendance compulsory</li>
-<li>Uniform mandatory</li>
-<li>Maintain discipline</li>
-<li>Respect staff and peers</li>
-</ul>
-</section>
-
-<!-- WHY -->
-<section class="section">
-<h2>Why Choose Our School</h2>
-<ul>
-<li>Government recognized institution</li>
-<li>Qualified teaching staff</li>
-<li>Multiple academic streams</li>
-<li>Focus on discipline and education</li>
-</ul>
+<div class="card">9th & 10th: 9:30 AM – 3:30 PM</div>
+<div class="card">11th & 12th: 9:30 AM – 2:45 PM</div>
 </section>
 
 <!-- GALLERY -->
@@ -230,7 +114,7 @@ The school has been officially structured as a Higher Secondary institution sinc
 <!-- CONTACT -->
 <section class="section" id="contact">
 <h2>Contact</h2>
-<p>Location: Sumbal, Bandipora, Jammu & Kashmir</p>
+<p>Sumbal, Bandipora, Jammu & Kashmir</p>
 </section>
 
 <!-- FOOTER -->
@@ -239,14 +123,46 @@ The school has been officially structured as a Higher Secondary institution sinc
 <p class="credit">Website Created By Ruhullah Hussain</p>
 </footer>
 
+<!-- WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/919103292029">Chat</a>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+<img id="modalImg">
+</div>
+
 <script>
+
+/* SLIDER */
 let slides=document.querySelectorAll('.slide');
-let index=0;
+let i=0;
 setInterval(()=>{
-slides[index].classList.remove('active');
-index=(index+1)%slides.length;
-slides[index].classList.add('active');
+slides[i].classList.remove('active');
+i=(i+1)%slides.length;
+slides[i].classList.add('active');
 },3000);
+
+/* GALLERY ZOOM */
+let images=document.querySelectorAll('.gallery img');
+let modal=document.getElementById('modal');
+let modalImg=document.getElementById('modalImg');
+
+images.forEach(img=>{
+img.onclick=()=>{
+modal.style.display="flex";
+modalImg.src=img.src;
+}
+});
+
+modal.onclick=()=>modal.style.display="none";
+
+/* NOTICE EDIT (simple) */
+let notice=document.getElementById("notice");
+notice.onclick=()=>{
+let newText=prompt("Enter new notice:");
+if(newText) notice.innerText="📢 "+newText;
+}
+
 </script>
 
 </body>
