@@ -6,149 +6,74 @@
 <title>Govt Boys HSS Sumbal</title>
 
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  scroll-behavior: smooth;
-}
+body {margin:0;font-family:Arial;scroll-behavior:smooth}
 
 /* NAVBAR */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #0b3d91;
-  padding: 10px;
-  color: white;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+display:flex;justify-content:space-between;align-items:center;
+background:#0b3d91;color:white;padding:10px;position:sticky;top:0;
+}
+.logo{display:flex;align-items:center}
+.logo img{width:40px;height:40px;margin-right:10px;border-radius:50%}
+.nav-links a{color:white;margin:8px;text-decoration:none;font-size:14px}
+
+/* HERO */
+.hero{position:relative;height:300px;overflow:hidden}
+.slide{position:absolute;width:100%;height:100%;background-size:cover;background-position:center;opacity:0;transition:1s}
+.slide.active{opacity:1}
+
+.hero-text{
+position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+color:white;text-align:center;background:rgba(0,0,0,0.5);
+padding:15px;border-radius:10px
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo img {
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
-  border-radius: 50%;
-}
-
-.nav-links a {
-  color: white;
-  margin: 8px;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-/* HERO SLIDER */
-.hero {
-  position: relative;
-  height: 300px;
-  overflow: hidden;
-}
-
-.slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  transition: 1s;
-}
-
-.slide.active {
-  opacity: 1;
-}
-
-.hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-  background: rgba(0,0,0,0.5);
-  padding: 15px;
-  border-radius: 10px;
-}
-
-/* SECTIONS */
-.section {
-  padding: 25px;
-}
-
-h2 {
-  color: #0b3d91;
-}
-
-.card {
-  background: #f1f1f1;
-  padding: 10px;
-  margin: 8px 0;
-  border-radius: 8px;
-}
+/* SECTION */
+.section{padding:25px}
+h2{color:#0b3d91}
+.card{background:#f1f1f1;padding:10px;margin:8px 0;border-radius:8px}
 
 /* GALLERY */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 10px;
-}
-
-.gallery img {
-  width: 100%;
-  border-radius: 10px;
-}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.gallery img{width:100%;border-radius:10px}
 
 /* FOOTER */
-footer {
-  background: #0b3d91;
-  color: white;
-  text-align: center;
-  padding: 10px;
-}
+footer{background:#0b3d91;color:white;text-align:center;padding:10px}
+.credit{font-size:12px;margin-top:5px}
 </style>
-
 </head>
 
 <body>
 
 <!-- NAVBAR -->
 <div class="navbar">
-  <div class="logo">
-    <img src="logo.png">
-    <span>Govt Boys HSS Sumbal</span>
-  </div>
-
-  <div class="nav-links">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#faculty">Faculty</a>
-    <a href="#contact">Contact</a>
-  </div>
+<div class="logo">
+<img src="logo.png">
+<span>Govt Boys HSS Sumbal</span>
 </div>
 
-<!-- HERO SLIDER -->
+<div class="nav-links">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#faculty">Faculty</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+
+<!-- HERO -->
 <section class="hero" id="home">
+<div class="slide active" style="background-image:url('school1.jpg')"></div>
+<div class="slide" style="background-image:url('school2.jpg')"></div>
+<div class="slide" style="background-image:url('school3.jpg')"></div>
+<div class="slide" style="background-image:url('school4.jpg')"></div>
+<div class="slide" style="background-image:url('school5.jpg')"></div>
+<div class="slide" style="background-image:url('school6.jpg')"></div>
 
-  <div class="slide active" style="background-image:url('school1.jpg')"></div>
-  <div class="slide" style="background-image:url('school2.jpg')"></div>
-  <div class="slide" style="background-image:url('school3.jpg')"></div>
-  <div class="slide" style="background-image:url('school4.jpg')"></div>
-  <div class="slide" style="background-image:url('school5.jpg')"></div>
-  <div class="slide" style="background-image:url('school6.jpg')"></div>
-
-  <div class="hero-text">
-    <h1>Govt Boys HSS Sumbal</h1>
-    <p>Excellence in Education</p>
-    <p>Established: 1981</p>
-  </div>
-
+<div class="hero-text">
+<h1>Govt Boys HSS Sumbal</h1>
+<p>Excellence in Education</p>
+<p>Established: 1981</p>
+</div>
 </section>
 
 <!-- ABOUT -->
@@ -177,29 +102,121 @@ The school has been officially structured as a Higher Secondary institution sinc
 <!-- PRINCIPAL -->
 <section class="section">
 <h2>Principal Message</h2>
-<p>
-Our mission is to provide quality education and strong moral values,
-helping students grow academically and personally.
-</p>
+<p>Our mission is to provide quality education and strong moral values, helping students grow academically and personally.</p>
+</section>
+
+<!-- PRINCIPAL HISTORY -->
+<section class="section">
+<h2>Principal History</h2>
+<div class="card">Mr. M. L. Peer (1983 – 1986)</div>
+<div class="card">Mr. O. N. Raina (1986 – 1993)</div>
+<div class="card">Mr. Abdul Gafar Bhat (1993 – 1996)</div>
+<div class="card">Mr. Farooq Ahmad Sheikh (1996 – 1999)</div>
+<div class="card">Mr. Mohammad Amin Kaloo (1999 – 2001)</div>
+<div class="card">Mr. Shabir Ahmad Sheikh (2001 – 2003)</div>
+<div class="card">Mr. Mohammad Sultan Shah (2004 – 2006)</div>
+<div class="card">Mr. Mushtaq Ahmad Shah (2007 – 2008)</div>
+<div class="card">Mr. Sheikh Tarooq (2008 – 2012)</div>
+<div class="card">Mr. Shafkat Hussain Khan (2012 – 2015)</div>
+<div class="card">Mr. G. N. Zargar (2015 – 2016)</div>
+<div class="card">Mr. Ghulam Hassan Bhat (2016 – 2021)</div>
+<div class="card">Mr. Mohammad Altaf Zargar (2021 – 2022)</div>
+<div class="card">Mtr. Nighat Mubeen (2022 – 2024)</div>
+<div class="card">Mr. Abdul Gani Bhat (2024 – Present)</div>
 </section>
 
 <!-- FACULTY -->
 <section class="section" id="faculty">
 <h2>Teaching Faculty</h2>
 
+<h3>Senior Lecturers</h3>
 <div class="card">Fayaz Ahmad Lone (English)</div>
 <div class="card">Ehteshamul Haq (Botany)</div>
 <div class="card">Mohd Akber Ganie (Chemistry)</div>
-<div class="card">Shabir Ahmad Wani (Physical Education)</div>
-<div class="card">Mudasir Abdur Raoof (Biotech)</div>
-<div class="card">Ishtiyaq Farooqi (Math)</div>
 
+<h3>Lecturers</h3>
+<div class="card">Shabir Ahmad Wani (Physical Education)</div>
+<div class="card">Mudasir Abdur Raoof (Biotechnology)</div>
+<div class="card">Ishtiyaq Farooqi (Mathematics)</div>
+<div class="card">Gayas ud din Malik (Economics)</div>
+<div class="card">Farah Qayoom (Zoology)</div>
+<div class="card">Mufti Sheeba (Information Practices)</div>
+
+<h3>Teachers</h3>
+<div class="card">Mohammad Ashraf Shah</div>
+<div class="card">Syed Imtiyaz</div>
+<div class="card">Mohammad Arif Dhobi</div>
+<div class="card">Shoveket Ahmad Khanday</div>
+
+<h3>Vocational Trainers</h3>
+<div class="card">Asif Iqbal (Tourism)</div>
+<div class="card">Umer Bashir (IT & ITES)</div>
+</section>
+
+<!-- NON TEACHING -->
+<section class="section">
+<h2>Non-Teaching Staff</h2>
+<div class="card">Lateef Ahmad Mir (Sr. Assistant)</div>
+<div class="card">Owais Lateef Shah (Librarian)</div>
+<div class="card">Tabasum Raja (Jr. Assistant)</div>
+<div class="card">Javaid Ahmad Bhat (Lab Assistant)</div>
+<div class="card">Shabir Ahmad Gojree (Lab Assistant)</div>
+<div class="card">Sami Ullah (MTS)</div>
+<div class="card">Amir Subhan (MTS)</div>
+<div class="card">Tariq Ahmad Haji (MTS)</div>
+<div class="card">Manzoor Ahmad Ganai (MTS)</div>
+<div class="card">Rajesh Kumar (MTS)</div>
+<div class="card">Manzoor Ahmad Parray (MTS)</div>
+</section>
+
+<!-- STREAMS -->
+<section class="section">
+<h2>Academic Streams</h2>
+<h3>Science</h3>
+<div class="card">Physics, Chemistry, Biology, Mathematics, Biotechnology</div>
+
+<h3>Humanities</h3>
+<div class="card">Economics, Education, History, Urdu</div>
+
+<h3>Commerce</h3>
+<div class="card">Business Studies, Accountancy, Entrepreneurship</div>
+
+<h3>Additional</h3>
+<div class="card">Physical Education, IP / ITES / Tourism</div>
+</section>
+
+<!-- TIMING -->
+<section class="section">
+<h2>School Timing</h2>
+<div class="card">Class 9th & 10th: 9:30 AM – 3:30 PM</div>
+<div class="card">Class 11th & 12th: 9:30 AM – 2:45 PM</div>
+</section>
+
+<!-- RULES -->
+<section class="section">
+<h2>Rules & Discipline</h2>
+<ul>
+<li>Regular attendance compulsory</li>
+<li>Uniform mandatory</li>
+<li>Maintain discipline</li>
+<li>Respect staff and peers</li>
+</ul>
+</section>
+
+<!-- WHY -->
+<section class="section">
+<h2>Why Choose Our School</h2>
+<ul>
+<li>Government recognized institution</li>
+<li>Qualified teaching staff</li>
+<li>Multiple academic streams</li>
+<li>Focus on discipline and education</li>
+</ul>
 </section>
 
 <!-- GALLERY -->
 <section class="section">
 <h2>Gallery</h2>
-
 <div class="gallery">
 <img src="gallery1.jpg">
 <img src="gallery2.jpg">
@@ -208,7 +225,6 @@ helping students grow academically and personally.
 <img src="gallery5.jpg">
 <img src="gallery6.jpg">
 </div>
-
 </section>
 
 <!-- CONTACT -->
@@ -220,18 +236,17 @@ helping students grow academically and personally.
 <!-- FOOTER -->
 <footer>
 <p>© 2026 Govt Boys HSS Sumbal</p>
+<p class="credit">Website Created By Ruhullah Hussain</p>
 </footer>
 
-<!-- SLIDER SCRIPT -->
 <script>
-let slides = document.querySelectorAll('.slide');
-let index = 0;
-
-setInterval(() => {
-  slides[index].classList.remove('active');
-  index = (index + 1) % slides.length;
-  slides[index].classList.add('active');
-}, 3000);
+let slides=document.querySelectorAll('.slide');
+let index=0;
+setInterval(()=>{
+slides[index].classList.remove('active');
+index=(index+1)%slides.length;
+slides[index].classList.add('active');
+},3000);
 </script>
 
 </body>
